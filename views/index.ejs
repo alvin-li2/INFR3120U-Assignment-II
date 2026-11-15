@@ -34,7 +34,8 @@
               <a class="nav-link active" aria-current="page" href="/aboutme"> <i class="fa-solid fa-circle-info"></i>
                 About me</a>
               <% } else { %>
-                <a class="nav-link" aria-current="page" href="/aboutme"><i class="fa-solid fa-house"></i></i>About me</a>
+                <a class="nav-link" aria-current="page" href="/aboutme"><i class="fa-solid fa-house"></i></i>About
+                  me</a>
                 <% } %>
           </li>
           <li class="nav-item">
@@ -63,6 +64,37 @@
     <%= title %>
   </h1>
   <p>Welcome to <%= title %>
+      <% if (title=="Contact me" ) {%>
+        <div>
+          <form action="mailto:alvin.li@ontariotechu.net?subject=Feedback_Regarding_Website" method="post"
+            enctype="text/plain" name="feedback">
+            <p>
+              <label for="firstName">Enter your First Name</label>
+              <input type="text" id="firstName" size="32" placeholder="Enter your First Name" required>
+            </p>
+            <p>
+              <label for="lastName">Enter your Last Name</label>
+              <input type="text" id="lastName" size="32" placeholder="Enter your Last Name" required>
+            </p>
+            <p>
+              <label for="email">Enter your Email Address</label>
+              <input type="email" id="email" size="32" placeholder="Enter your Email Address" required>
+            </p>
+            <p>
+              <label for="phone">Enter your Phone Number Here (optional)</label>
+              <input type="tel" id="phone" size="32" placeholder="Enter your Phone Number Here">
+            </p>
+            <p>
+              <label for="message">Enter your Message</label><br>
+              <textarea name="message" id="message" cols="60" rows="8" placeholder="Enter your Message Here"
+                required></textarea>
+            </p>
+            <p>
+              <input type="submit" value="Submit">
+            </p>
+          </form>
+        </div>
+<% } %>
   </p>
 </body>
 
