@@ -60,10 +60,14 @@
       </div>
     </div>
   </nav>
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Welcome to <%= title %>
+  <h1>Welcome to My <%= title %> Page</h1>
+  <% if (title=="Home" ) {%>
+    <div>
+      <h2>This is the home page of my Website, you can find the navigation features in the top left of your screen.
+        I
+        hope you enjoy it!</h2>
+    </div>
+    <% } %>
       <% if (title=="Contact me" ) {%>
         <div>
           <form action="mailto:alvin.li@ontariotechu.net?subject=Feedback_Regarding_Website" method="post"
@@ -94,8 +98,8 @@
             </p>
           </form>
         </div>
-<% } %>
-  </p>
+        <% } %>
+          </p>
 </body>
 
 </html>
